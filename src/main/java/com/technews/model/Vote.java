@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Id
+@Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "vote")
 public class Vote implements Serializable {
