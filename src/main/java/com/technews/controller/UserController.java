@@ -1,9 +1,21 @@
 package com.technews.controller;
 
+import com.technews.model.Post;
+import com.technews.model.User;
+
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.technews.repository.UserRepository;
+import com.technews.repository.VoteRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import org.springframework.security.crypto.bcrypt.BCrypt;
 
 @RestController
 public class UserController {
+
     @Autowired
     UserRepository repository;
 
